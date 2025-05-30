@@ -11,18 +11,17 @@ import { CartContext } from './context/cartContext';
 import { cartReducer, initialState } from './reducers/ProductsReducer';
 
 const App = () => {
-  const [state,dispatch] = useReducer(cartReducer,initialState)
+  const [state, dispatch] = useReducer(cartReducer, initialState);
   return (
-    
-    <CartContext.Provider value={{state,dispatch}}>
+    <CartContext.Provider value={{ state, dispatch }}>
       <TopBar />
       <Navbar />
       <Main>
         <ProductSection />
-        <Cart/>
+        <Cart />
       </Main>
-      <Newsletter/>
-      <Footer/>
+      <Newsletter />
+      <Footer />
     </CartContext.Provider>
   );
 };

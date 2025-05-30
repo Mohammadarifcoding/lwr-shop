@@ -3,20 +3,30 @@ import { CartContext } from '../../context/cartContext';
 import { randomId } from '../../utils/getId';
 
 const ProductCard = ({ product }) => {
-  const {state,dispatch} = useContext(CartContext)
-    console.log(state)
+  const { state, dispatch } = useContext(CartContext);
+  console.log(state);
   const discountedPrice = product.discountAvailable
     ? (product.price - (product.price * product.discountAmount) / 100).toFixed(2)
     : product.price.toFixed(2);
-    const addToCart = ()=>{
-      const payload = { quantity: 1, productId: product.id, id: randomId(), name: product.name, image: product.image, price: discountedPrice, rating: product.rating, size: product.size, color: product.color }
-        dispatch({type: "ADD_TO_CART", payload: payload})
-    }
+  const addToCart = () => {
+    const payload = {
+      quantity: 1,
+      productId: product.id,
+      id: randomId(),
+      name: product.name,
+      image: product.image,
+      price: discountedPrice,
+      rating: product.rating,
+      size: product.size,
+      color: product.color,
+    };
+    dispatch({ type: 'ADD_TO_CART', payload: payload });
+  };
 
-    const removeFromCart = ()=>{
-      const payload = { productId: product.id }
-      dispatch({type: "REMOVE_FROM_CART", payload: payload})
-    }
+  const removeFromCart = () => {
+    const payload = { productId: product.id };
+    dispatch({ type: 'REMOVE_FROM_CART', payload: payload });
+  };
   return (
     <div className="bg-gray-100 rounded-lg overflow-hidden transition-transform hover:scale-[1.02] duration-300">
       <div className="h-48 bg-gray-200 flex items-center justify-center">
@@ -48,13 +58,21 @@ const ProductCard = ({ product }) => {
         ) : (
           <p className="font-bold">${product.price} </p>
         )}
-        {
-          product?.isInCart ? <button onClick={removeFromCart} className="w-full mt-2 bg-red-800 py-1 text-gray-100 rounded flex items-center justify-center">Remove from Cart</button> :         
-        <button onClick={addToCart} className="disabled:bg-gray-700 disabled:text-gray-400 disabled:cursor-not-allowed w-full mt-2 bg-gray-800 py-1 text-gray-100 rounded flex items-center justify-center active:translate-y-1 transition-all active:bg-gray-900">
-          Add to Cart
-        </button>
-        }
-
+        {product?.isInCart ? (
+          <button
+            onClick={removeFromCart}
+            className="w-full mt-2 bg-red-800 py-1 text-gray-100 rounded flex items-center justify-center"
+          >
+            Remove from Cart
+          </button>
+        ) : (
+          <button
+            onClick={addToCart}
+            className="disabled:bg-gray-700 disabled:text-gray-400 disabled:cursor-not-allowed w-full mt-2 bg-gray-800 py-1 text-gray-100 rounded flex items-center justify-center active:translate-y-1 transition-all active:bg-gray-900"
+          >
+            Add to Cart
+          </button>
+        )}
       </div>
     </div>
   );

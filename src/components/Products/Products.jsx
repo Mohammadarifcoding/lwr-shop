@@ -4,8 +4,8 @@ import ProductCard from './ProductCard';
 import { CartContext } from '../../context/cartContext';
 
 const Products = () => {
-  const {state} = useContext(CartContext)
-const products = state.products
+  const { state } = useContext(CartContext);
+  const products = state.products;
   return (
     <div className="product-grid">
       {products?.map((product) => (
