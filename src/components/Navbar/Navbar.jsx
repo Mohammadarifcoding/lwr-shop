@@ -10,7 +10,7 @@ const Navbar = () => {
         </a>
         <nav className="hidden md:flex space-x-6">
           {NavData.map((item) => (
-            <a href={item.href} className="hover:text-gray-500 transition-colors">
+            <a key={item.label} href={item.href} className="hover:text-gray-500 transition-colors">
               {item.label}
             </a>
           ))}
