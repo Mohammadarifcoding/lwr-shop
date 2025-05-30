@@ -2,14 +2,15 @@ import product1 from '/dist/assets/img/image 1.png';
 import product2 from '/dist/assets/img/image 10-1.png';
 import product3 from '/dist/assets/img/image 10-2.png';
 import product4 from '/dist/assets/img/image 7-1.png';
-import product5 from '/dist/assets/img/image 7-2.png';
+import product5 from '/dist/assets/img/image 7.png';
 import product6 from '/dist/assets/img/image 8-2.png';
 import product7 from '/dist/assets/img/image 8.png';
 import product8 from '/dist/assets/img/image 9.png';
-import product9 from '/dist/assets/img/image 11.png';
+import product9 from '/dist/assets/img/image 8-1.png';
 
 export const ProductData = [
   {
+    id: 1,
     image: product1,
     name: 'Gradient Graphic T-shirt',
     rating: 4,
@@ -19,6 +20,7 @@ export const ProductData = [
     discountAmount: 20,
   },
   {
+    id: 2,
     image: product2,
     name: 'Polo with Tipping Details',
     rating: 1,
@@ -28,6 +30,7 @@ export const ProductData = [
     discountAmount: 0,
   },
   {
+    id: 3,
     image: product3,
     name: 'Black Striped T-shirt',
     rating: 3,
@@ -37,6 +40,7 @@ export const ProductData = [
     discountAmount: 10,
   },
   {
+    id: 4,
     image: product4,
     name: 'Skinny Fit Jeans',
     rating: 4,
@@ -46,6 +50,7 @@ export const ProductData = [
     discountAmount: 30,
   },
   {
+    id: 5,
     image: product5,
     name: 'Checkered Shirt',
     rating: 4,
@@ -55,6 +60,7 @@ export const ProductData = [
     discountAmount: 0,
   },
   {
+    id: 6,
     image: product6,
     name: 'Sleeve Striped T-shirt',
     rating: 4,
@@ -64,6 +70,7 @@ export const ProductData = [
     discountAmount: 15,
   },
   {
+    id: 7,
     image: product7,
     name: 'Vertical Striped Shirt',
     rating: 5,
@@ -73,6 +80,7 @@ export const ProductData = [
     discountAmount: 25,
   },
   {
+    id: 8,
     image: product8,
     name: 'Courage Graphic T-shirt',
     rating: 5,
@@ -82,6 +90,7 @@ export const ProductData = [
     discountAmount: 25,
   },
   {
+    id: 9,
     image: product9,
     name: 'Loose Fit Bermuda Shorts',
     rating: 4,

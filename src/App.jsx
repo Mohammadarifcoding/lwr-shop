@@ -1,12 +1,18 @@
 import React from 'react';
 import TopBar from './shared/TopBar/TopBar';
 import Navbar from './components/Navbar/Navbar';
+import Main from './components/Main/Main';
+import Filter from './components/filter/Filter';
+import ProductSection from './components/ProductSection/ProductSection';
 
 const App = () => {
   return (
     <div className="">
       <TopBar />
-      <Navbar/>
+      <Navbar />
+      <Main>
+       <ProductSection/>
+      </Main>
     </div>
   );
 };
