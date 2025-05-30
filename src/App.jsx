@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useReducer } from 'react';
 import TopBar from './shared/TopBar/TopBar';
 import Navbar from './components/Navbar/Navbar';
 import Main from './components/Main/Main';
@@ -7,10 +7,14 @@ import ProductSection from './components/ProductSection/ProductSection';
 import Cart from './components/cart/Cart';
 import Newsletter from './components/newsletter/Newsletter';
 import Footer from './components/footer/Footer';
+import { CartContext } from './context/cartContext';
+import { cartReducer, initialState } from './reducers/ProductsReducer';
 
 const App = () => {
+  const [state,dispatch] = useReducer(initialState,cartReducer)
   return (
-    <div className="">
+    
+    <CartContext.Provider value={{state,dispatch}}>
       <TopBar />
       <Navbar />
       <Main>
@@ -19,7 +23,7 @@ const App = () => {
       </Main>
       <Newsletter/>
       <Footer/>
-    </div>
+    </CartContext.Provider>
   );
 };
 

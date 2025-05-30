@@ -20,6 +20,7 @@ export const ProductData = [
     discountAmount: 20,
     size: 'Large',
     color: 'Gray',
+    isInCart: false,
   },
   {
     id: 2,
@@ -32,6 +33,7 @@ export const ProductData = [
     discountAmount: 0,
     size: 'Medium',
     color: 'Navy Blue',
+    isInCart: false,
   },
   {
     id: 3,
@@ -44,6 +46,7 @@ export const ProductData = [
     discountAmount: 10,
     size: 'Large',
     color: 'Black',
+    isInCart: false,
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ export const ProductData = [
     discountAmount: 30,
     size: '32',
     color: 'Denim Blue',
+    isInCart: false,
   },
   {
     id: 5,
@@ -68,6 +72,7 @@ export const ProductData = [
     discountAmount: 0,
     size: 'Large',
     color: 'Red',
+    isInCart: false,
   },
   {
     id: 6,
@@ -80,6 +85,7 @@ export const ProductData = [
     discountAmount: 15,
     size: 'Medium',
     color: 'White',
+    isInCart: false,
   },
   {
     id: 7,
@@ -92,6 +98,7 @@ export const ProductData = [
     discountAmount: 25,
     size: 'Extra Large',
     color: 'Black',
+    isInCart: false,
   },
   {
     id: 8,
@@ -104,6 +111,7 @@ export const ProductData = [
     discountAmount: 25,
     size: 'Large',
     color: 'Gray',
+    isInCart: false,
   },
   {
     id: 9,
@@ -116,5 +124,6 @@ export const ProductData = [
     discountAmount: 0,
     size: 'Large',
     color: 'Olive Green',
+    isInCart: false,
   },
 ];
