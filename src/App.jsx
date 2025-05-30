@@ -4,6 +4,9 @@ import Navbar from './components/Navbar/Navbar';
 import Main from './components/Main/Main';
 import Filter from './components/filter/Filter';
 import ProductSection from './components/ProductSection/ProductSection';
+import Cart from './components/cart/Cart';
+import Newsletter from './components/newsletter/Newsletter';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
@@ -11,8 +14,11 @@ const App = () => {
       <TopBar />
       <Navbar />
       <Main>
-       <ProductSection/>
+        <ProductSection />
+        <Cart/>
       </Main>
+      <Newsletter/>
+      <Footer/>
     </div>
   );
 };

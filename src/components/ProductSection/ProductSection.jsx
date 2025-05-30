@@ -3,15 +3,13 @@ import Filter from '../filter/Filter';
 import Products from '../Products/Products';
 
 const ProductSection = () => {
-    return (
-<div className="lg:col-span-2">
-<Filter/>
+  return (
+    <div className="lg:col-span-2">
+      <Filter />
 
-  <Products/>
-
-</div>
-
-    );
+      <Products />
+    </div>
+  );
 };
 
 export default ProductSection;

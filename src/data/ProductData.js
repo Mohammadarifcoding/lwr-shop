@@ -18,6 +18,8 @@ export const ProductData = [
     price: 145,
     discountAvailable: true,
     discountAmount: 20,
+    size: 'Large',
+    color: 'Gray',
   },
   {
     id: 2,
@@ -28,6 +30,8 @@ export const ProductData = [
     price: 180,
     discountAvailable: false,
     discountAmount: 0,
+    size: 'Medium',
+    color: 'Navy Blue',
   },
   {
     id: 3,
@@ -38,6 +42,8 @@ export const ProductData = [
     price: 120,
     discountAvailable: true,
     discountAmount: 10,
+    size: 'Large',
+    color: 'Black',
   },
   {
     id: 4,
@@ -48,6 +54,8 @@ export const ProductData = [
     price: 240,
     discountAvailable: true,
     discountAmount: 30,
+    size: '32',
+    color: 'Denim Blue',
   },
   {
     id: 5,
@@ -58,6 +66,8 @@ export const ProductData = [
     price: 180,
     discountAvailable: false,
     discountAmount: 0,
+    size: 'Large',
+    color: 'Red',
   },
   {
     id: 6,
@@ -68,6 +78,8 @@ export const ProductData = [
     price: 130,
     discountAvailable: true,
     discountAmount: 15,
+    size: 'Medium',
+    color: 'White',
   },
   {
     id: 7,
@@ -78,6 +90,8 @@ export const ProductData = [
     price: 212,
     discountAvailable: true,
     discountAmount: 25,
+    size: 'Extra Large',
+    color: 'Black',
   },
   {
     id: 8,
@@ -88,6 +102,8 @@ export const ProductData = [
     price: 145,
     discountAvailable: true,
     discountAmount: 25,
+    size: 'Large',
+    color: 'Gray',
   },
   {
     id: 9,
@@ -98,5 +114,7 @@ export const ProductData = [
     price: 80,
     discountAvailable: false,
     discountAmount: 0,
+    size: 'Large',
+    color: 'Olive Green',
   },
 ];

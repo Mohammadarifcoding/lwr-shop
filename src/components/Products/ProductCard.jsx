@@ -1,7 +1,9 @@
 import React from 'react';
 
 const ProductCard = ({ product }) => {
-    const discountedPrice = product.discountAvailable ? (product.price - (product.price * product.discountAmount / 100)).toFixed(2) : product.price.toFixed(2);
+  const discountedPrice = product.discountAvailable
+    ? (product.price - (product.price * product.discountAmount) / 100).toFixed(2)
+    : product.price.toFixed(2);
   return (
     <div className="bg-gray-100 rounded-lg overflow-hidden transition-transform hover:scale-[1.02] duration-300">
       <div className="h-48 bg-gray-200 flex items-center justify-center">
@@ -25,15 +27,15 @@ const ProductCard = ({ product }) => {
           </div>
           <span className="text-xs text-gray-700">({product.stock} pcs left)</span>
         </div>
-        {
-            product.discountAvailable ? <div class="flex items-center">
-                <p class="font-bold">${discountedPrice}</p>
-                <p class="text-gray-400 line-through ml-2">${product.price}</p>
-                
-              </div>:   <p className="font-bold">${product.price} </p>
-        }
-        
-      
+        {product.discountAvailable ? (
+          <div class="flex items-center">
+            <p class="font-bold">${discountedPrice}</p>
+            <p class="text-gray-400 line-through ml-2">${product.price}</p>
+          </div>
+        ) : (
+          <p className="font-bold">${product.price} </p>
+        )}
+
         {/* <button className="w-full mt-2 bg-red-800 py-1 text-gray-100 rounded flex items-center justify-center">Remove from Cart</button> */}
         <button className="disabled:bg-gray-700 disabled:text-gray-400 disabled:cursor-not-allowed w-full mt-2 bg-gray-800 py-1 text-gray-100 rounded flex items-center justify-center active:translate-y-1 transition-all active:bg-gray-900">
           Add to Cart
